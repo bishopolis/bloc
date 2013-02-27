@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
+  post: 
   name: MyString
   email: MyString
-  bio: MyText
   website: 
-  twitter: 
-  linkedin: 
+  comment: MyText
 
 two:
+  post: 
   name: MyString
   email: MyString
-  bio: MyText
   website: 
-  twitter: 
-  linkedin: 
+  comment: MyText

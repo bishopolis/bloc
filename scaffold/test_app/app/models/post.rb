@@ -1,7 +1,4 @@
 class Post < ActiveRecord::Base
-  	attr_accessible :content, :name, :title
-  	def hello
- 		 "Hello #{self.name}"
-	end
-	belongs_to :author
+  belongs_to :author
+  attr_accessible :body, :published, :published_date, :summary, :title, :uri
 end
