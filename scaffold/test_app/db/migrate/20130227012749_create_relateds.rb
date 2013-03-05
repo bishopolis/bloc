@@ -2,7 +2,7 @@ class CreateRelateds < ActiveRecord::Migration
   def change
     create_table :relateds do |t|
       t.references :post
-      t.uri :uri
+      t.string :uri
 
       t.timestamps
     end

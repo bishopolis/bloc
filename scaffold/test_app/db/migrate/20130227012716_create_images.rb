@@ -1,7 +1,7 @@
 class CreateImages < ActiveRecord::Migration
   def change
     create_table :images do |t|
-      t.uri :image
+      t.string :image
       t.references :post
 
       t.timestamps

@@ -4,7 +4,7 @@ class CreateBlogs < ActiveRecord::Migration
       t.string :blog_name
       t.string :username
       t.string :password
-      t.file :logo_location
+      t.string :logo_location
 
       t.timestamps
     end

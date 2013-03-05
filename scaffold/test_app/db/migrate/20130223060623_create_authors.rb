@@ -3,6 +3,10 @@ class CreateAuthors < ActiveRecord::Migration
     create_table :authors do |t|
       t.string :name
       t.string :email
+      t.text :bio
+      t.string :website
+      t.string :twitter
+      t.string :linkedin
 
       t.timestamps
     end
