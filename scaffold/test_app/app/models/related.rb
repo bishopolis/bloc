@@ -1,4 +1,5 @@
 class Related < ActiveRecord::Base
-  belongs_to :post
   attr_accessible :uri
+
+  belongs_to :post
 end

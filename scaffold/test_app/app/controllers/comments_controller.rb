@@ -1,6 +1,6 @@
-class PostsController < ApplicationController
+class CommentsController < ApplicationController
   def index
-  	 @posts = Post.all
+  	 @posts = Comment.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -9,46 +9,29 @@ class PostsController < ApplicationController
   end
 
   def new
-  	@post = Post.new
+  	@post = Comment.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
      end
   end
-  def admin
-     @posts = Post.all
-
-    respond_to do |format|
-      format.html # admin.html.erb
-      format.json { render json: @posts }
-    end
-  end
-  def show
-  	@post = Post.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
-    end
-  end
-
   def edit
-  	@post = Post.find(params[:id])
+  	@post = Comment.find(params[:id])
   end
 
 # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @comment = Comment.new(params[:post])
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
+        format.html { redirect_to @comment, notice: 'Post was successfully created.' }
+        format.json { render json: @comment, status: :created, location: @post }
       else
         format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end

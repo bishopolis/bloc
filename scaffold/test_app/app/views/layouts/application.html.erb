@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="wrapper">
+	<header>
+		<div class="nav">
+		<ul>
+			<li><a href="/">Home</a>
+			<li><%= link_to 'About', posts_admin_path %></a>
+			<li><a href="/posts/admin">Admin</a>
+		</ul>
+		</div>
+	</header>
+	<section id="intro">
+  <h1><a href="/">A BLOG</a></h1>
+  <h3>By Jon Bishop</h3>
+	</section>
 <%= yield %>
-
+<footer>
+		<div class="nav">
+		<ul>
+			<li><a href="/">Home</a>
+			<li><a href="/about">About</a>
+			<li><a href="/admin">Admin</a>
+		</ul>
+		</div>
+	</footer>
+</div> <!-- wrapper -->
 </body>
 </html>

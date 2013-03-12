@@ -1,0 +1,16 @@
+
+
+<% @posts.each do |post| %>
+  
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+    <span><%= link_to 'Show', post %></span>
+    <span><%= link_to 'Edit', edit_post_path(post) %></span>
+    <span><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+  
+<% end %>
+
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
