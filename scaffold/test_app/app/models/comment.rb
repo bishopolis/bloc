@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :content, :email, :name, :website
+  attr_accessible :content
   belongs_to :post
 end

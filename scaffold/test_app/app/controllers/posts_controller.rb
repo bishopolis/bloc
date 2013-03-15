@@ -2,35 +2,20 @@ class PostsController < ApplicationController
   def index
   	 @posts = Post.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @posts }
-    end
   end
 
   def new
   	@post = Post.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @post }
-     end
   end
+
   def admin
      @posts = Post.all
-
-    respond_to do |format|
-      format.html # admin.html.erb
-      format.json { render json: @posts }
-    end
   end
-  def show
-  	@post = Post.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
-    end
+  def show
+  @post = Post.find(params[:id])
+  @comments = @post.comments
+  @comment = Comment.new
   end
 
   def edit

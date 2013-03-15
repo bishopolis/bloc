@@ -1,9 +1,9 @@
 TestApp::Application.routes.draw do
   
-  resources :posts
-  resources :post
-  resources :comments
-  resources :comment
+  resources :posts do
+    resources :comments
+  end
+
     match "/admin" => "posts#admin"
 
   # The priority is based upon order of creation:
