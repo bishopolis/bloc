@@ -187,8 +187,8 @@ h1{
 	color: #195073;
 	background: #fff;
 	overflow: hidden;
-	border-left: 1px solid #195073;
-	border-right: 1px solid #195073;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
 }
 .section{
 	clear: both;
@@ -263,8 +263,31 @@ footer .nav ul {
 
 // footer end
 
+// Bootstrap 
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-inner {
+	border-radius: 0px;
+	border-right: none;
+	border-left: none;
+}
+.hero-unit {
+	border-radius: 0px;
+	background: #195073;
+	padding: 30px;
 
+	h1 {
+		color: #d4d4d4;
 
+	}
+
+	p {
+		color: #fff;
+		padding: 10px 0;
+	}
+
+}
 
 
 

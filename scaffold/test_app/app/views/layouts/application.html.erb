@@ -9,29 +9,19 @@
 </head>
 <body>
 <div id="wrapper">
-	<header>
-		<div class="nav">
-		<ul>
-			<li><a href="/">Home</a>
-			<li><</a>
-			<li><a href="/admin">Admin</a>
-		</ul>
-		</div>
-	</header>
 	<div class="navbar">
   		<div class="navbar-inner">
-    		<a class="brand" href="#">Title</a>
     		<ul class="nav">
-      			<li class="active"><a href="#">Home</a></li>
-      			<li><a href="#">Link</a></li>
-      			<li><a href="#">Link</a></li>
+      			<li><a href="/">Home</a></li>
+      			<li><a href="/about">About</a></li>
+      			<li><a href="/admin">Admin</a></li>
     		</ul>
-  		</div>
-	</div>
-	<section id="intro">
-  <h1><a href="/">A BLOG</a></h1>
-  <h3>By Jon Bishop</h3>
-	</section>
+  		</div><!-- navbar -->
+	</div><!-- navbar inner -->
+	<div class="hero-unit">
+  		<h1>A Blog</h1>
+  		<p>By Jonathan Bishop</p>
+	</div> <!-- hero-unit -->
 <%= yield %>
 <footer>
 		<div class="nav">
