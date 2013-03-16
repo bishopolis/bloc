@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130227012749) do
+ActiveRecord::Schema.define(:version => 20130316045048) do
 
   create_table "authors", :force => true do |t|
     t.integer  "blog_id"
@@ -76,5 +76,13 @@ ActiveRecord::Schema.define(:version => 20130227012749) do
   end
 
   add_index "relateds", ["post_id"], :name => "index_relateds_on_post_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

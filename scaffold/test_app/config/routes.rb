@@ -1,5 +1,8 @@
 TestApp::Application.routes.draw do
   
+  match "/users/index" => "users#index"
+
+  resources :users
   resources :posts do
     resources :comments
   end
